@@ -7,7 +7,7 @@
 ## 首頁
 輸入目標客群、產品名稱
 
-![image](https://github.com/Zhijwu/AI-Generated-Marketing-Copy-Automation/assets/113652924/2862ed3a-4b4f-4439-a259-745fad0945f3)
+![image](https://github.com/Zhijwu/AI-Generated-Marketing-Copy-Automation/assets/113652924/9c1d006c-a415-4142-80a4-31c7e87d3fb4|width=50)
 
 ## 第二頁
 輸入文案風格、行銷框架、呈現方式
