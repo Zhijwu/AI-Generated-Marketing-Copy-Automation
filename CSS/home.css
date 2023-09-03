@@ -1,0 +1,217 @@
+body{
+    font-family: "Noto Sans","Microsoft JhengHei";
+	margin: 0;
+	padding: 0;
+  }
+
+.imtoolbar{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	font-size: 20px;
+	background: linear-gradient(150deg, #323F6B,  #78a7fe);
+	color: #FFFFFF;
+	text-align: center;
+	padding: 10px;
+}
+
+/*
+#134098
+#133698
+#7484C1
+#B0C0E3
+*/
+/*
+深藍色1	#1A2D4E
+深藍色2 	#323F6B
+亮藍色1     #A4EEF9
+淺藍色1 	#B7DBFD
+藍色        #3581F9 
+*/
+
+.wraper{
+	width: 500px;
+	margin:10px auto;
+}
+
+ul, li{
+    list-style-type: none;
+}
+
+ul{
+	padding-inline-start: 0;
+	text-align: center;
+}
+
+p{
+	font-size: 15px;
+	font-weight:500;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.cart>li>a{
+	border:1px solid #323F6B;	
+	border-radius: 30px;
+	color:#323F6B;
+	font-weight:600;
+	font-size: 20px;
+	padding: 10px;
+	text-align: center;
+}
+
+.cart>li>a:hover,.cart>li>a.active{
+	border:1px solid #78a7fe;	
+	background-color:  #78a7fe;
+	color:#FFFFFF;
+}
+
+.cart a{
+	display: block;
+	text-decoration: none;	
+}
+
+.cart ul{
+	display: none;
+}
+
+.cart ul li{
+	margin:10px;
+}
+
+.cart ul li a{
+	color:#5746B0;
+}
+
+.cart{
+    margin: auto;
+    margin-top: 200px;
+}
+
+/*展開式裡的div*/
+.impretty{
+	display: flex;
+	justify-content: space-between;
+}
+
+button{
+	width: 120px;
+	height: 20px;
+	border-radius: 30px;
+	border: 1px solid #8f8f8f;
+	background: rgba(0,151,167,0);
+	background-blend-mode: normal;
+	color: #8f8f8f;
+}
+
+button:hover{
+	width: 120px;
+	height: 20px;
+	border-radius: 30px;
+	border: 1px solid #8f8f8f;
+	background: rgb(112, 113, 113);
+	background-blend-mode: normal;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.iminput{
+	color: #5746B0;
+	border: 1px solid #5746B0;
+	outline: none;
+	height: 20px;
+	columns: 20px;
+	font-family: Arial, sans-serif; /* 將字體設為 Arial */
+    font-size: 16px; /* 將字體大小設為 16px */
+}
+
+.imanotherinput{
+	color: #5746B0;
+	border: 1px solid #5746B0;
+	outline: none;
+	font-family: Arial, sans-serif; /* 將字體設為 Arial */
+    font-size: 16px; /* 將字體大小設為 16px */
+}
+
+.imtheBigBtn{
+	width: 150px;
+	height: 40px;
+	border-radius: 30px;
+	border: none;
+	background-color: #323F6B;
+	background-blend-mode: normal;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 18px;
+	transition: background-color 0.3s;
+	margin: auto;
+}
+
+.imtheBigBtn:hover{
+	width: 150px;
+	height: 40px;
+	background-color: #78a7fe;
+	border: none;
+    color: white;
+	cursor: pointer;
+}
+
+
+/*匯入選單*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+
+  table{
+	border:1px solid #323F6B;
+	margin: auto;
+  }
+
+  th, td{
+	border:1px solid #323F6B;
+	padding: 10px;
+  }
+
+  thead {
+	background-color: #323F6B;
+	color: white; /* 如果你想讓字體顏色為白色 */
+  }
+
+  .click:hover{
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

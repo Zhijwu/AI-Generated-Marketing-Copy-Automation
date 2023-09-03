@@ -1,0 +1,227 @@
+body{
+    font-family: "Noto Sans","Microsoft JhengHei";
+	margin: 0;
+	padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.imtoolbar{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: linear-gradient(150deg, #323F6B,  #78a7fe);
+	color: #FFFFFF;
+	text-align: center;
+	padding: 10px;
+}
+
+.imstylediv{
+    width: 600px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.imsmalldiv{
+    margin-bottom: 20px;
+}
+
+label{
+    color: #5746B0;
+}
+
+.iminput{
+    color: #5746B0;
+    border: 2px solid #5746B0;
+    width: 580px;
+    padding: 5px;
+    outline: none;
+    font-family: Arial, sans-serif; /* 將字體設為 Arial */
+    font-size: 16px; /* 將字體大小設為 16px */
+    height: 20px;
+}
+
+/*改變radio  btn顏色*/
+/*
+input[type='radio'] {
+    display: none;
+}
+
+input[type='radio'] + label:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+    position: relative;
+    bottom: 1px;
+    border-radius: 50%;
+    border:2px solid #5746B0;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+}
+
+input[type='radio']:checked + label:before {
+    background-color: #A4EEF9;
+}
+*/
+button{
+	width: 150px;
+	height: 30px;
+	border-radius: 30px;
+	background-color: #323F6B;
+	background-blend-mode: normal;
+	color: #ffffff;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: #78a7fe;
+	border: #FFFFFF;
+  color: white;
+	cursor: pointer;
+}
+
+
+/*boostrap.css*/
+.bootstrap-tagsinput {
+    border: 2px solid #5746B0;
+    box-shadow: inset 0 1px 1px rgba(241, 115, 115, 0);
+    color: #77F2A1;
+    vertical-align: middle;
+    width: 580px;
+    padding: 5px;
+    cursor: text;
+  }
+
+  .bootstrap-tagsinput input {
+    border: none;
+    color: #5746B0;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    width: 580px;
+  }
+
+  .bootstrap-tagsinput.form-control input::-moz-placeholder {
+    color: #f16767;
+    opacity: 1;
+  }
+  .bootstrap-tagsinput.form-control input:-ms-input-placeholder {
+    color: #78b3ef;
+  }
+  .bootstrap-tagsinput.form-control input::-webkit-input-placeholder {
+    color: #b689f0;
+  }
+  .bootstrap-tagsinput input:focus {
+    border: none;
+    box-shadow: none;
+  }
+  .bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    padding: 5px;
+    font-size: 3px;
+    color: #4F76F6;
+    background-color: #77F2A1;
+    border-radius: 10px;
+  }
+  .bootstrap-tagsinput .tag [data-role="remove"] {
+    margin-left: 6px;
+    cursor: pointer;
+  }
+  .bootstrap-tagsinput .tag [data-role="remove"]:after {
+    content: "X";
+    padding: 0px 2px;
+  }
+  .bootstrap-tagsinput .tag [data-role="remove"]:hover {
+    box-shadow: inset 0 1px 0 rgba(235, 117, 117, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .bootstrap-tagsinput .tag [data-role="remove"]:hover:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  /*boostrap.css*/
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: #928ab4;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 0.9;
+  width: 400px;
+  text-align: left;
+  position:absolute;
+  left: -50%;
+  transform: translateX(-50%);
+}
+
+#loadingContainer.hidden {
+  display: none;
+}
+#loadingContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
+  width: 16em;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-icon {
+  margin-right: 1em;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+  height: 5em;
+  width: 5em;
+}
+
+.loading-text {
+  color: #1a202c;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}

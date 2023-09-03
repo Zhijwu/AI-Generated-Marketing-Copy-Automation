@@ -1,0 +1,86 @@
+body {
+    font-family: "Noto Sans", "Microsoft JhengHei";
+    margin: 0;
+    padding: 0;
+}
+
+.imtoolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 20px;
+    background: linear-gradient(150deg, #323F6B, #78a7fe);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px; 
+    max-width: 1200px;
+    margin: auto;
+}
+
+.inner{
+	width: 60%; 
+    text-align: left;
+	margin-bottom: 20px;
+}
+
+label {
+    color: #323F6B;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+
+textarea.custom-textarea {
+    width: 800px;
+	height: 500px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+	outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* 考慮內邊距和邊框在寬度和高度的計算中 */
+}
+
+input{
+	width: 800px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+	outline: none;
+}
+
+input:focus, textarea.custom-textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0,123,255,0.2);
+}
+
+button {
+    width: 150px;
+	height: 30px;
+	border-radius: 30px;
+    background-color: #323F6B;;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #78a7fe;
+}
