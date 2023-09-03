@@ -1,7 +1,7 @@
 # AI-Generated-Marketing-Copy-Automation
 🍎主題: 利用生成式 AI 打造出行銷文案自動生成的商業應用平台!
 
-負責工作: Backend
+負責工作: Backend(Python)
 
 
 ## 首頁
