@@ -10,7 +10,7 @@
 ![image](https://github.com/Zhijwu/AI-Generated-Marketing-Copy-Automation/assets/113652924/9c1d006c-a415-4142-80a4-31c7e87d3fb4|height=10)
 
 ## 第二頁
-輸入文案風格、行銷框架、呈現方式
+輸入文案風格、選擇行銷框架、呈現方式
 
 ![image](https://github.com/Zhijwu/AI-Generated-Marketing-Copy-Automation/assets/113652924/50b4f5c5-eae5-423f-aa40-42d3989c2d2a)
 
