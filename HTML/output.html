@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/output.css') }}">
+    <title>行銷文案智慧創作</title>
+</head>
+<body>
+    <div class="imtoolbar">
+        <h1>行&nbsp;&nbsp;銷&nbsp;&nbsp;文&nbsp;&nbsp;案&nbsp;&nbsp;智&nbsp;&nbsp;慧&nbsp;&nbsp;創&nbsp;&nbsp;作</h1>
+    </div>
+    <div id="steps_Container" class="imbuttonsdiv">
+    </div>
+    <div style="width: 100%;">
+        <!---左半邊-->
+        <div id="left" class="left">
+            <div class="immiddlediv">
+                <p style="font-weight: bold; color: #5746B0; font-size: 21px;">SETTING</p>
+                <div class="imsmalldiv" style="margin-left: 45px;">
+                    <label for="style">風格&nbsp;&nbsp;</label>
+                    <input id="style" type="text" class="iminput">
+                </div>
+                <div class="imsmalldiv" style="margin-left: 30px;">
+                    <label for="keyword">關鍵字&nbsp;&nbsp;</label>
+                    <input id="keyword" type="text"  class="iminput">
+                </div>
+                <div class="imsmalldiv" style="margin-left: 15px;">
+                    <label for="features">其他特性&nbsp;&nbsp;</label>
+                    <select id="features" class="imselect" multiple>
+                        <option value="1">觀點含數字</option>
+                        <option value="7">主描述含數字</option>
+                        <option value="2">主標題含數字</option>
+                        <option value="3">主述求加優勢</option>
+                        <option value="4">優惠活動含社交媒體</option>
+                        <option value="5">不可保證獲利字詞</option>
+                        <option value="6">獲利風險平衡報導</option>
+                    </select>
+                </div>
+                <div class="imsmalldiv" style="margin-left: 15px;">
+                    <label for="sentences">造句模板&nbsp;&nbsp;</label>
+                    <select id="sentences"  class="iminput" style="width: 190px;"></select>
+                </div>
+                <div class="imsmalldiv" style="margin-left: 48px;">
+                    <label>模板&nbsp;&nbsp;</label>
+                    <select id="ai6103vm03yk6" class="imselect">
+                        <option value="EDM">EDM</option>
+                        <option value="LINE">LINE</option>
+                        <option value="MBN">MBN</option>
+                    </select>
+                </div>
+                
+                <div class="imsmalldiv">
+                    <label>主標題字數&nbsp;&nbsp;</label>
+                    <input id="maintitlenum" type="number" class="iminput" style="width: 30px; font-size: 14px; padding: 5px;" value="10" max="99" min="5">
+                    <label>字以內</label>
+                </div>
+                <div class="imsmalldiv">
+                    <label>主標題敘述&nbsp;&nbsp;</label>
+                    <input id="maintitledescnum" type="number" class="iminput" style="width: 30px; font-size: 14px; padding: 5px;" value="10" max="99" min="5">
+                    <label>字以內</label>
+                </div>
+                <div class="imsmalldiv">
+                    <label>小標題字數&nbsp;&nbsp;</label>
+                    <input id="smalltitlecnum" type="number" class="iminput" style="width: 30px; font-size: 14px; padding: 5px;" value="10" max="99" min="5">
+                    <label>字以內</label>
+                </div>
+                <div class="imsmalldiv">
+                    <label>小標題內容&nbsp;&nbsp;</label>
+                    <input id="smalltitledescnum" type="number" class="iminput" style="width: 30px; font-size: 14px; padding: 5px;" value="10" max="99" min="5">
+                    <label>字以內</label>
+                </div>
+                <div class="imsmalldiv" style="text-align: center;">
+                    <button id="edit" class="imeditBtn">重新創作&nbsp;&#10132;</button>
+                </div>
+                <div class="imsmalldiv" style="text-align: center;">
+                    <button id="backto" class="backButton" style="background-color: lightgray;" >&#9668;&nbsp;回到產品頁</button>
+                </div>
+                <hr>
+                <div>
+                    <a href="javascript:void(0);" id="checkList"> ✔廣宣Checklist</a>
+                </div>
+                <!---
+                <div>
+                    <input type="file" id="fileUpload" onchange="onLoadFile()" accept=".txt">
+                    <p id="aleart"></p>
+                </div>
+                -->
+            </div>
+        </div>
+        <!---左半邊-->
+        
+        <!---右半邊-->
+        <div id="right" class="right">
+            <div style="display: block; margin-top: 20px; text-align: start; width: 900px;">
+                <n id="showStep" style="font-size: 30px; color: #5746B0;">我是說明</n>
+            </div>
+            <!---通用-->
+            <div id="GENERAL_EDM" class="ai6103">
+                <div class="MAIN">
+                    <div class="main_main">
+                        <n id="edm_mainview" style="color: #FFFFFF;">職場新鮮人</n>
+                    </div>
+                </div>
+                <div class="CONTENT">
+                    <p id="edm_mainlist" style="color: #FFFFFF; font-weight: bold; font-size: 26px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"></p>
+                </div>
+                <div class="POINTS">
+                    <h3>
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" style="width: 40px;">
+                        <span id="edm_point1">標題一</span>
+                    </h3>
+                    <p id="edm_disc1">我是內容</p>
+                
+                    <h3>
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" style="width: 40px;">
+                        <span id="edm_point2">標題二</span>
+                    </h3>
+                    <p id="edm_disc2">我是內容</p>
+                
+                    <h3>
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" style="width: 40px;">
+                        <span id="edm_point3">標題三</span>
+                    </h3>
+                    <p id="edm_disc3">我是內容</p>
+                </div>  
+                <div class="PRODUCTION">
+                    <h2 id="edm_production">數位理財奈米投，為新鮮人打開投資之門。</h2>
+                </div> 
+                <div class="DISCOUNT">
+                    <p id="edm_discount" style="font-size: 18px;">優惠內容</p>
+                </div>
+                <!---投資警語(用上傳檔案的方式)-->
+                <div class="WARNNING">
+                    <pre id="edm_show" style="margin-left: 10px; width: 850px;">投資警訊</pre>
+                </div>
+            </div>
+            <div id="GENERAL_LINE" class="line">
+                <div class="main_line" id="animated-text">
+                    <p id="line_mainview" style="color: black;">AIDA_LINE-主溝通訴求</p>
+                </div>
+                <div class="content_line">
+                    <p id="line_mainpoint" style="color: black;">AIDA_LINE溝通內容</p>
+                </div>
+                <div class="production_line">
+                    <p id="line_content1" style="color: black;">產品介紹</p>
+                </div>
+                <div class="production_line">
+                    <p id="line_content2" style="color: black;">產品介紹</p>
+                </div>
+                <div class="discount_line">
+                    <p id="line_extra" style="color: black;">額外資訊</p>
+                </div>
+            </div>
+            <div id="GENERAL_MBN" class="phone">
+                <div class="main_mbn" id="animated-text">
+                    <p id="mbn_mainview" style="color: black;">MBN-主溝通訴求</p>
+                </div>
+                <div class="content_mbn">
+                    <p id="mbn_mainlist" style="color: black;">溝通內容</p>
+                </div>
+                <div class="production_mbn">
+                    <p id="mbn_content" style="color: black;">產品介紹</p>
+                </div>
+                <div class="discount_mbn">
+                    <p id="mbn_extra" style="color: black;">額外資訊</p>
+                </div>
+            </div>
+            <!---通用-->
+        <!---右半邊-->
+
+    </div>
+    <div id="loadingContainer" class="hidden">
+        <div class="loading-content">
+            <div class="loading-icon">
+                <svg class="animate-spin" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="#eeeeee" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="none" stroke="#1a202c" stroke-width="4" d="M22 12H18"></path>
+                </svg>
+            </div>
+            <div class="loading-text">
+                <p style="color: #00008B; font-weight: bold;">您的文案正在生成，請稍待1分鐘，我們將精心為您服務.....</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='cap_output.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>行銷產品資訊</title>
+</head>
+<body>
+
+    <!---toolbar標題-->
+    <div class="imtoolbar">
+        <h1>行&nbsp;&nbsp;銷&nbsp;&nbsp;產&nbsp;&nbsp;品&nbsp;&nbsp;資&nbsp;&nbsp;訊</h1>
+    </div>
+
+    <!---寫展開式選單-->
+    <div class="wraper">
+		<ul class="cart">
+			<li>
+				<a href="#">客&nbsp;&nbsp;群</a>
+				<ul>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">目標客群<span style="color: red; font-size: 20px;">*</span></a>
+                            <input id="targetAudience" type="text" class="iminput" required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">年齡區間</a>
+                            <div style="display: flex; height: 20px;">
+                                <input id="age1" type="text" style="width: 75px; height: 20px;" placeholder="歲" class="iminput">
+                                <p style="margin: auto; margin-left: 10px; margin-right: 10px;">至</p>
+                                <input id="age2" type="text" style="width: 75px; height: 20px;" placeholder="歲" class="iminput">
+                            </div>
+                        </div>
+                    </li>
+					<li>
+                        <div class="impretty">
+                            <a href="#">年收入區間</a>
+                            <div style="display: flex; height: 20px;">
+                                <input id="salary1" type="text" style="width: 75px; height: 20px;" placeholder="新台幣(萬)" class="iminput">
+                                <p style="margin: auto; margin-left: 10px; margin-right: 10px;">至</p>
+                                <input id="salary2" type="text" style="width: 75px; height: 20px;" placeholder="新台幣(萬)" class="iminput">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">性別</a>
+                            <div style="display: flex; height: 20px; margin-right: 40px;">
+                                <input id="whateverForGender" name="gender" type="radio" checked>
+                                <label for="whateverForGender">不限</label>
+                                <input id="male" name="gender" type="radio">
+                                <label for="male">男生</label>
+                                <input id="female" name="gender" type="radio">
+                                <label for="female">女生</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">婚姻</a>
+                            <div style="display: flex; height: 20px; margin-right: 40px;">
+                                <input id="whateverForMarriage" name="marriage" type="radio" checked >
+                                <label for="whateverForMarriage">不限</label>
+                                <input id="married" name="marriage" type="radio">
+                                <label for="married">已婚</label>
+                                <input id="single" name="marriage" type="radio">
+                                <label for="single">未婚</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">是否有小孩</a>
+                            <div style="display: flex; height: 20px; margin-right: 72px;">
+                                <input id="whateverForChild" name="child" type="radio" checked>
+                                <label for="whateverForChild">不限</label>
+                                <input id="yesForChild" name="child" type="radio">
+                                <label for="yesForChild">是</label>
+                                <input id="noForChild" name="child" type="radio">
+                                <label for="noForChild">否</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">空間時間運用</a>
+                            <input id="spaceTime" type="text" class="iminput">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">理財風險承受度</a>
+                            <select id="risksOverwhelming" style="width: 200px; height: 20px;" class="iminput">
+                                <option disabled selected>理財風險承受度</option>
+                                <option value="不能承受投資損失">不能承受投資損失</option>
+                                <option value="投資損失在5％以內的可以接受">投資損失在5％以內的可以接受</option>
+                                <option value="追求10%以上的獲利，願意接受10％以上的投資損失">追求10%以上的獲利，願意接受10％以上的投資損失</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">社交媒體參與度</a>
+                            <select id="socialParticipant" style="width: 200px; height: 20px;" class="iminput">
+                                <option disabled selected>社交媒體參與度</option>
+                                <option value="常看社群的投資經驗">常看社群的投資經驗</option>
+                                <option value="喜歡在社群分享自己的投資經驗">喜歡在社群分享自己的投資經驗</option>
+                                <option value="只聽新朋好友的投資想法">只聽親朋好友的投資想法</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="impretty">
+                            <a href="#">其他特徵描述</a>
+                            <textarea id="otherDiscription" rows="4" cols="22" class="imanotherinput"></textarea>
+                        </div>
+                    </li>
+                    <li style="margin-top: 20px;">
+                        <div style="text-align: center;">
+                            <button id="btnSaveAudience">存成temp</button>
+                            <button id="btninputAudience">匯入temp</button>
+                        </div>
+                    </li>
+				</ul>
+			</li>
+            <br>
+			<li>
+				<a href="#">產&nbsp;&nbsp;品</a>
+				<ul>
+					<li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">產品名稱<span style="color: red; font-size: 20px;">*</span></a>
+                            <input id="productName" type="text" class="iminput">
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">產品類型<span style="color: red; font-size: 20px;">*</span></a>
+                            <select id="productType" style="width: 200px; height: 20px;" class="iminput">
+                                <option disabled selected>產品類型</option>
+                                <option value="credit-card">信用卡</option>
+                                <option value="loan">貸款</option>
+                                <option value="investment">投資</option>
+                                <option value="trustContainer">信託</option>
+                                <option value="ETF">外債ETF</option>
+                              </select>
+                        </div>
+                        <input id="producttypetext" type="text" class="input" name="producttypetext" style="border: none; margin-left: 250px;" contenteditable="true">
+                    </li>
+					<li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">產品特性<span style="color: red; font-size: 20px;">*</span></a>
+                            <input id="productFeature" type="text" class="iminput">
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">產品形象<span style="color: red; font-size: 20px;">*</span></a>
+                            <input id="productImage" type="text" class="iminput">
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">優惠方案<span style="color: red; font-size: 20px;">*</span></a>
+                            <textarea id="productDiscount" rows="4" cols="22" class="imanotherinput"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">活動辦法(理念)<span style="color: red; font-size: 20px;">*</span></a>
+                            <textarea id="activityMethod" rows="4" cols="22" class="imanotherinput"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">產品異於同質性優勢</a>
+                            <textarea id="productAdvantage" rows="4" cols="22" class="imanotherinput"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">產品異於同質性劣勢</a>
+                            <textarea id="productDisadvantage" rows="4" cols="22" class="imanotherinput"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">產品故事性</a>
+                            <textarea id="productStory" rows="4" cols="22" class="imanotherinput"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">是否有活動截止日</a>
+                            <input id="warranty" type="date" class="iminput">
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">是否有售後服務</a>
+                            <input id="afterservice" type="text" class="iminput">
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">購買方式</a>
+                            <textarea id="productPurchase" rows="4" cols="22" class="imanotherinput"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;" >
+                            <a href="#">購買條件</a>
+                            <input id="purchaseRule" type="text" class="iminput">
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;">
+                            <a href="#">是否有數量限制</a>
+                            <input id="numlimit" type="text" class="iminput">
+                        </div>
+                    </li>
+                    <li>
+                        <div style="display: flex; justify-content: space-between;">
+                            <a href="#">投資警語</a>
+                            <input type="file" id="fileUpload" onchange="onLoadFile()" accept=".txt" style="width: 200px;">
+                        </div>
+                    </li>
+                    <li style="margin-top: 20px;">
+                        <div style="text-align: center;">
+                            <button id="btnSaveProducts">存成temp</button>
+                            <button id="btninputProducts">匯入temp</button>
+                        </div>
+                    </li>
+				</ul>
+			</li>
+		</ul>
+    </div>
+
+    <!---送出btn-->
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+        <button id="btnSubmitAll" class="imtheBigBtn">SUBMIT</button>
+    </div>
+
+
+    <!---客群匯入-->
+    <div id="AudienceForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form style="text-align: center;">
+                <table id="audienceTable">
+                    <thead>
+                        <tr>
+                          <th>勾選</th>
+                          <th>目標客群</th>
+                          <th>角色</th>
+                          <th>空閒時間運用</th>
+                          <th>編輯</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="checkbox" name="checkaudience"></td>
+                          <td>一人公司</td>
+                          <td>公司老闆</td>
+                          <td>家庭成員共渡</td>
+                          <td><span class="click" onclick="editRow(this)">編輯</span>/<span class="click" onclick="deleteRow(this)">刪除</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkaudience"></td>
+                            <td>單身族</td>
+                            <td>上班族</td>
+                            <td>找好友聚餐、運動</td>
+                            <td><span class="click" onclick="editRow(this)">編輯</span>/<span class="click" onclick="deleteRow(this)">刪除</span></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              <button id="inputAudience" type="button" style="margin-top: 20px;">input</button>
+            </form>
+          </div>
+
+          <div class="modal-content" style="display: none;">
+            <span class="close">&times;</span>
+            <form id="editAudienceForm" style="text-align: center;">
+                <div>
+                    <input type="text" id="editTargetAudience" placeholder="目標客群">
+                </div>
+                <div>
+                    <input type="text" id="editages" placeholder="年齡區間">
+                </div>
+                <div>
+                    <input type="text" id="editsalary" placeholder="年收入區間">
+                </div>
+                <div>
+                    <input type="text" id="editgender" placeholder="性別">
+                </div>
+                <div>
+                    <input type="text" id="editmarriage" placeholder="婚姻">
+                </div>
+                <div>
+                    <input type="text" id="editrole" placeholder="角色">
+                </div>
+                <div>
+                    <input type="text" id="editspacetime" placeholder="空間時間運用">
+                </div>
+                <div>
+                    <input type="text" id="editrisks" placeholder="理財風險承受度">
+                </div>
+                <div>
+                    <input type="text" id="editsocial" placeholder="社交媒體參與度">
+                </div>
+                <div>
+                    <input type="text" id="editotherfeature" placeholder="其他特徵描述">
+                </div>
+                <div>
+                    <button id="saveChanges" type="submit">Save Changes</button>
+                </div>
+            </form>
+            </div>
+    </div>
+
+    <!---產品匯入-->
+    <div id="ProductsForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form style="text-align: center;">
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                          <th>勾選</th>
+                          <th>產品名稱</th>
+                          <th>產品類型</th>
+                          <th>產品形象</th>
+                          <th>編輯</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="checkproduct"></td>
+                            <td>數位理財奈米投</td>
+                            <td>外債ETF;台灣股票ETF</td>
+                            <td>年終優惠</td>
+                            <td><span class="click" onclick="editRow(this)">編輯</span>/<span class="click" onclick="deleteRow(this)">刪除</span></td>
+                          </tr>
+                        <tr>
+                          <td><input type="checkbox" name="checkproduct"></td>
+                          <td>優質債券基金</td>
+                          <td>基金</td>
+                          <td>專家管理</td>
+                          <td><span class="click" onclick="editRow(this)">編輯</span>/<span class="click" onclick="deleteRow(this)">刪除</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkproduct"></td>
+                            <td>2023年信貸活動</td>
+                            <td>信用貸款</td>
+                            <td>忠肯，您的最好靠山</td>
+                            <td><span class="click" onclick="editRow(this)">編輯</span>/<span class="click" onclick="deleteRow(this)">刪除</span></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              <button id="inputProducts" type="button" style="margin-top: 20px;">input</button>
+            </form>
+          </div>
+    </div>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='cap_home.js') }}"></script>
+</body>
+</html>

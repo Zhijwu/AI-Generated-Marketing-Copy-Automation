@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <!---<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">--->
+    <!-- Bootstrap Tagsinput CSS -->
+    <!---<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css">--->
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Tagsinput JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
+
+    <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>風格設置</title>
+</head>
+<body>
+    <div class="imtoolbar">
+        <h1>風&nbsp;&nbsp;格&nbsp;&nbsp;設&nbsp;&nbsp;置</h1>
+    </div>
+
+    <!---寫風格設置欄位-->
+    <div class="imstylediv">
+        <div class="imsmalldiv">
+            <label for="style" style="font-weight: bold;">整體風格設置</label><br>
+            <input id="style" type="text" class="iminput">
+        </div>
+        <div class="imsmalldiv">
+            <label for="keyword" style="font-weight: bold;">關鍵字</label><br>
+            <input id="keyword"  type="text" data-role="tagsinput" class="iminput">
+        </div>
+        <div class="imsmalldiv">
+            <label style="font-weight: bold;">文案風格&nbsp;
+                <div class="tooltip">
+                    <img src="{{ url_for('static', filename='/img/qa.png') }}" height="15px" width="15px" class="hover-image"></label>
+                    <span class="tooltip-text">
+                        <ul>
+                            <li>嘿!看這裡!&gt;&gt;引人好奇、極度吸晴的文案</li>
+                            <li>全世界我最強&gt;&gt;自誇宣言、權威力量的文案</li>
+                            <li>聽我的準沒錯!&gt;&gt;強制命令、果決堅定的文案</li>
+                            <li>我懂你在想什麼!&gt;&gt;共情效應、切身搭話的文案</li>
+                            <li>真心話大聲說!&gt;&gt;情感真摯、自我剖析的文案</li>
+                            <li>這也太洗腦了!&gt;&gt;語句節奏、朗朗上口的文案</li>
+                        </ul>
+                    </span>
+                </div><br>
+            <input name="contentstyle" type="radio" id="lookHere">
+            <label for="lookHere">嘿！看這裡！</label>
+            <input name="contentstyle" type="radio" id="imTheBest">
+            <label for="imTheBest">全世界我最強</label>
+            <input name="contentstyle" type="radio" id="listenToMe">
+            <label for="listenToMe">聽我的準沒錯！</label><br>
+            <input name="contentstyle" type="radio" id="iKnowYou">
+            <label for="iKnowYou">我懂你在想什麼</label>
+            <input name="contentstyle" type="radio" id="brainWashing">
+            <label for="brainWashing">這也太洗腦了</label>
+            <input name="contentstyle" type="radio" id="other">
+            <label for="other">其他</label>
+            <input type="text" id="otherInput" style="border: 1px solid #5746B0; display: none; outline: none;">
+        </div>
+        <div class="imsmalldiv">
+            <label style="font-weight: bold;">提案框架&nbsp;<span style="color: red; font-size: 20px;">*</span>
+                <div class="tooltip">
+                    <img src="{{ url_for('static', filename='/img/qa.png') }}" height="15px" width="15px" class="hover-image"></label>
+                    <span class="tooltip-text" style="width: 330px;">
+                        <ul>
+                            <li>AIDA：<br>Awareness & Interest吸引注意<br>
+                                &gt;&gt;Consideration & Intent引起興趣<br>
+                                &gt;&gt;valuation & Purchase 考慮<br>
+                                &gt;&gt;Loyalty & Advocacy行動
+                            </li>
+                            <li>PAS：<br>Problem or pain-問題<br>
+                                &gt;&gt;Agitate-激勵<br>
+                                &gt;&gt;Solution-解決方案
+                            </li>
+                        </ul>
+                    </span>
+                </div><br>
+            <input name="proposol" type="radio" id="aida" value="aida">
+            <label for="aida">aida</label>
+            <input name="proposol" type="radio" id="pas" value="pas">
+            <label for="pas">pas</label>
+            <input name="proposol" type="radio" id="otherproposol">
+            <label for="otherproposol">其他</label>
+            <input type="text" id="otherproposolnameInput" placeholder="輸入提案框架名稱" style="border: 1px solid #5746B0; display: none; outline: none;">
+            <input type="text" id="otherproposolcontentInput" placeholder="輸入提案框架內容" style="border: 1px solid #5746B0; display: none; outline: none;">
+
+            <!---
+            <input name="proposol" type="radio" id="pastor">
+            <label for="pastor">PASTOR</label>
+            <input name="proposol" type="radio" id="5a">
+            <label for="5a">5A行銷</label>
+            <input name="proposol" type="radio" id="point">
+            <label for="point">觀點強調</label>
+            -->
+        </div>
+        <div class="imsmalldiv">
+            <label style="font-weight: bold;">呈現方式&nbsp;<span style="color: red; font-size: 20px;">*</span>
+                <div class="tooltip">
+                    <img src="{{ url_for('static', filename='/img/qa.png') }}" height="15px" width="15px" class="hover-image"></label>
+                    <span class="tooltip-text" style="width: 200px;">
+                        <ul>
+                            <li>EDM廣告</li>
+                            <li>LINE廣告</li>
+                            <li>MBN廣告</li>
+                        </ul>
+                    </span>
+                </div><br>
+            <input name="showOutput" type="radio" id="edm" value="EDM">
+            <label for="edm">EDM</label>
+            <input name="showOutput" type="radio" id="line" value="LINE">
+            <label for="line">LINE</label>
+            <input name="showOutput" type="radio" id="mbn" value="MBN">
+            <label for="mbn">MBN</label>
+        </div>
+        <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+            <button id="submitSTYLE">SUBMIT</button>
+        </div>
+    </div>
+    <div id="loadingContainer" class="hidden">
+        <div class="loading-content">
+            <div class="loading-icon">
+                <svg class="animate-spin" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="#add8e6" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="none" stroke="#ffffff" stroke-width="4" d="M22 12H18"></path>
+                </svg>
+            </div>
+            <div class="loading-text">
+                <p style="color: #00008B; font-weight: bold;">您的文案正在生成，請稍待1分鐘，我們將精心為您服務.....</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript" src="{{ url_for('static', filename='cap_style.js') }}"></script>
+</body>
+</html>

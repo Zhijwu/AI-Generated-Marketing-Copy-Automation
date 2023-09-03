@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/editable.css') }}">
+    <title>成果編輯</title>
+</head>
+<body>
+    <!---toolbar標題-->
+    <div class="imtoolbar">
+        <h1>成&nbsp;&nbsp;果&nbsp;&nbsp;編&nbsp;&nbsp;輯</h1>
+    </div>
+    <div class="container">
+        <div class="inner">
+            <label for="fileName">File name:</label>
+            <input type="text" id="fileName" placeholder="輸入欲存檔名稱.txt">
+        </div>
+        <div class="inner">
+            <label for="imstepEditable">File content:</label>
+            <textarea id="imstepEditable"  class="custom-textarea"></textarea>
+        </div>
+        
+        <div style="padding: 10px;">
+            <button id="goOnNextPage">SUBMIT</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='editable.js') }}"></script>
+</body>
+</html>
